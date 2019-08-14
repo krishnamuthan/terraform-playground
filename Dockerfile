@@ -2,6 +2,7 @@ FROM codercom/code-server:latest
 
 USER root
 WORKDIR /root/project
+COPY ./main.tf .
 
 RUN apt-get update -y && apt-get upgrade -y && apt-get install -y unzip curl
 RUN curl -O https://releases.hashicorp.com/terraform/0.11.14/terraform_0.11.14_linux_amd64.zip
